@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author zhoukai
- * @date 2018/9/4
+ * @author Shanks
+ * @date 2018-09-04
  */
 public class ToListTest {
 
@@ -20,18 +20,11 @@ public class ToListTest {
         list.add(1);
         list.add(2);
         list.add(3);
-<<<<<<< Updated upstream
         List<Integer> collect = list.stream().filter(p -> p >= 2).collect(Collectors.toList());
         System.out.println(collect);
-=======
-        List<Integer> collect = list.stream().filter(p -> p >= 2).collect(toList());
-        System.out.println("collect：" + collect);
->>>>>>> Stashed changes
 
         List<Object> objectList = Lists.newArrayList();
-        collect.stream()
-                .peek(System.out::println)
-                .forEach(objectList::add);
+        collect.stream().peek(System.out::println).forEach(objectList::add);
         System.out.println(objectList);
     }
 }
